@@ -1,0 +1,22 @@
+name: Update commit hash
+on:
+  schedule:
+    - cron: "0 0 * * * *" # Every day at 00:00
+
+jobs:
+  change-commit:
+    name: Change the commit hash to the latest upstream one
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Change commit
+        run: |
+          hash=$(git ls-remote https://github.com/flyinghead/flycast refs/heads/master | cut -f 1)
+          sed -i "s/  commit: .*/  commit: $hash/" org.flycast.Flycast.yml
+      - name: Push the change
+        run: |
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git config user.name "${GITHUB_ACTOR}"
+          git add org.flycast.Flycast.yml
+          git commit -m "Update flycast.git"
+          git push
