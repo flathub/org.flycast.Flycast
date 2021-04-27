@@ -15,8 +15,8 @@ jobs:
           sed -i "s/  commit: .*/  commit: $hash/" org.flycast.Flycast.yml
       - name: Push the change
         run: |
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-          git config user.name "${GITHUB_ACTOR}"
+          git config user.name CI
+          git config user.email ""
           git add org.flycast.Flycast.yml
           git commit -m "Update flycast.git"
           git push
