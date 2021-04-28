@@ -18,5 +18,5 @@ jobs:
           git config user.name CI
           git config user.email ""
           git add org.flycast.Flycast.yml
-          git commit -m "Update flycast.git"
+          git commit -qm "Update flycast.git" || exit
           git push
