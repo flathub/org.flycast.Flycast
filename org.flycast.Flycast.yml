@@ -30,8 +30,9 @@ modules:
       - desktop-file-install ../shell/linux/flycast.desktop --dir /app/share/applications
       - sed -i 's/^Icon=flycast/Icon=org.flycast.Flycast/' /app/share/applications/flycast.desktop
       - install -Dm644 ../shell/linux/org.flycast.Flycast.metainfo.xml /app/share/metainfo/org.flycast.Flycast.metainfo.xml
+      - sed -i "s/date=.* v/date=\"$(git log -1 --format=%ci | awk '{print $1}')\" v/" /app/share/metainfo/org.flycast.Flycast.metainfo.xml
     sources:
       - type: git
         url: https://github.com/flyinghead/flycast.git
         branch: master
-        commit: 5dd15e2942a8530ae5d8f7e1f45a8e6d1f18536b
+        commit: d20fc971c953e326ed55ec8084bb88f0e4a116ad
