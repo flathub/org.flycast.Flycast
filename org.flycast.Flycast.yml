@@ -20,6 +20,7 @@ modules:
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
       - -DCMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE=build
+      - -DUSE_GLES=ON
     post-install:
       - install -Dm755 build/flycast /app/bin
       - |-
