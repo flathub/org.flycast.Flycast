@@ -25,4 +25,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/flyinghead/flycast.git
-        commit: 77a2bbbb8dc707fb26d8da425f203329b532d726
+        commit: c348f4ccade1a8d6f1e6f2e417c7887851c256f6
