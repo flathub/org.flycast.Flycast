@@ -20,6 +20,11 @@ modules:
     builddir: true
     config-opts:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
+    cleanup:
+      - /include
+      - /share/man
+      - /share/pixmaps
+      - /share/vulkan
     post-install:
       - sed -i "s/date=.* v/date=\"$(git show -s --format=%cs)\" v/" ${FLATPAK_DEST}/share/metainfo/org.flycast.Flycast.metainfo.xml
     sources:
