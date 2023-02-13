@@ -31,4 +31,4 @@ modules:
       - type: git
         url: https://github.com/flyinghead/flycast.git
         branch: master
-        commit: 71aea45811276692cd17de195e7fc1bef8fdfc75
+        commit: 08478aa75765df993a3e6b7507477f2bf364dca2
