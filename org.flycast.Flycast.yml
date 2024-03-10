@@ -31,7 +31,7 @@ modules:
       - type: git
         url: https://github.com/flyinghead/flycast.git
         branch: master
-        commit: d323490d1f7a91102fe125d15fed0b111afbb16b
+        commit: 464defe0d791795553a6cd2f0dbe05b437ecd068
 
 # The below comment makes flathub-external-data-checker run,
 # see the related grep command at https://github.com/flathub/actions/blob/master/flathub-external-data-checker/entrypoint.sh
