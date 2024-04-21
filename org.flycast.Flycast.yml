@@ -26,13 +26,11 @@ modules:
       - /share/pixmaps
       - /share/vulkan
     post-install:
-      - sed -i "s/date=.* v/date=\"$(git show -s --format=%cs)\" v/" ${FLATPAK_DEST}/share/metainfo/org.flycast.Flycast.metainfo.xml
+      - sed -i 's|<release .* />|<release date="'$(git show -s --format=%cs)'" version="'$(git describe --tags)'" />"|' ${FLATPAK_DEST}/share/metainfo/org.flycast.Flycast.metainfo.xml
     sources:
       - type: git
         url: https://github.com/flyinghead/flycast.git
-        branch: master
-        commit: 3c38fc1f16cc6518db46a5ad350e8b3738eefb48
-
-# The below comment makes flathub-external-data-checker run,
-# see the related grep command at https://github.com/flathub/actions/blob/master/flathub-external-data-checker/entrypoint.sh
-# x-checker-data
+        commit: 966ff3767dc6c7a8c84b123fcaa94b4bddced48a
+        x-checker-data:
+          type: git
+        tag: v2.3
