@@ -26,11 +26,12 @@ modules:
       - /share/pixmaps
       - /share/vulkan
     post-install:
-      - sed -i 's|<release .* />|<release date="'$(git show -s --format=%cs)'" version="'$(git describe --tags)'" />"|' ${FLATPAK_DEST}/share/metainfo/org.flycast.Flycast.metainfo.xml
+      - sed -i 's|<release .* />|<release date="'$(git show -s --format=%cs)'" version="'$(git
+        describe --tags)'" />"|' ${FLATPAK_DEST}/share/metainfo/org.flycast.Flycast.metainfo.xml
     sources:
       - type: git
         url: https://github.com/flyinghead/flycast.git
-        commit: 966ff3767dc6c7a8c84b123fcaa94b4bddced48a
+        commit: f13d7ad2dcf141f59a999090dbc0f78be196e665
         x-checker-data:
           type: git
-        tag: v2.3
+        tag: v2.3.2
