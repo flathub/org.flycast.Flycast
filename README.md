@@ -20,7 +20,7 @@ The `flatpak-builder` package is required.
 
 - Install the SDK
 
-`flatpak install org.freedesktop.Platform/x86_64/23.08 org.freedesktop.Sdk/x86_64/23.08`
+`flatpak install org.freedesktop.Platform/x86_64/24.08 org.freedesktop.Sdk/x86_64/24.08`
 
 - Build Flycast
 
