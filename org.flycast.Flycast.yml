@@ -31,7 +31,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/flyinghead/flycast.git
-        commit: f13d7ad2dcf141f59a999090dbc0f78be196e665
+        commit: 8108e63907fc676f898522d20c762a4de3cd2a21
         x-checker-data:
           type: git
-        tag: v2.3.2
+        tag: v2.4
